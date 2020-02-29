@@ -1,0 +1,10 @@
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.csprojAssemblyReference.cache
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.Form1.resources
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.Properties.Resources.resources
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.csproj.GenerateResource.cache
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.csproj.CoreCompileInputs.cache
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\bin\Debug\kursovaya.exe.config
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\bin\Debug\kursovaya.exe
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\bin\Debug\kursovaya.pdb
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.exe
+C:\Users\alexe\Downloads\Всё что надо сдать 2 курс\ООП курсач\kursovaya\kursovaya\obj\Debug\kursovaya.pdb
