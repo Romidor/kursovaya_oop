@@ -93,7 +93,7 @@ namespace kursovaya
 
         private void ToolStripTextBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Корнева А.А ПМИп -1702б 2019 год", "Информация о разработчике", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show("Долгов Е.И МОп -1703а 2020 год", "Информация о разработчике", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         }
 
         private void ToolStripTextBox3_Click(object sender, EventArgs e)
