@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Authentication.ExtendedProtection.Configuration;
 using System.Text;
@@ -14,6 +16,8 @@ namespace kursovaya
     public partial class ClassJournal : Form
     {
         private List<Student> students;
+        private FileStream data;
+        private const string file = "journal.txt";
 
         public ClassJournal()
         {
@@ -22,6 +26,56 @@ namespace kursovaya
             for (int i = 0; i < 5; i++)
             {
                 students.Add(new Student());
+            }
+            
+            if (!File.Exists(file))
+            {
+                data = new FileStream(file, FileMode.CreateNew);
+            } 
+            else
+            {
+                data = new FileStream(file, FileMode.Open);
+                StreamReader reader = new StreamReader(data);
+
+                string[] fios = reader.ReadLine().Split(' ');
+                TextBox[] boxesFio = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+                SetUpData(fios, boxesFio);
+
+                TextBox[] marks1tb = { textBox6, textBox36, textBox46, textBox16, textBox26 };
+                TextBox[] marks2tb = { textBox7, textBox37, textBox47, textBox17, textBox27 };
+                TextBox[] marks3tb = { textBox8, textBox38, textBox48, textBox18, textBox28 };
+                TextBox[] marks4tb = { textBox9, textBox39, textBox49, textBox19, textBox29 };
+                TextBox[] marks5tb = { textBox10, textBox40, textBox50, textBox20, textBox30 };
+                TextBox[] marks6tb = { textBox11, textBox41, textBox51, textBox21, textBox31 };
+                TextBox[] marks7tb = { textBox12, textBox42, textBox52, textBox23, textBox32 };
+                TextBox[] marks8tb = { textBox13, textBox43, textBox53, textBox22, textBox33 };
+                TextBox[] marks9tb = { textBox14, textBox44, textBox54, textBox25, textBox34 };
+                TextBox[] marks10tb = { textBox15, textBox45, textBox55, textBox24, textBox35 };
+                TextBox[] propusktb = { textBoxPropusk1, textBoxPropusk2, textBoxPropusk3, textBoxPropusk4, textBoxPropusk5 };
+                SetUpData(reader.ReadLine().Split(' '), marks1tb);
+                SetUpData(reader.ReadLine().Split(' '), marks2tb);
+                SetUpData(reader.ReadLine().Split(' '), marks3tb);
+                SetUpData(reader.ReadLine().Split(' '), marks4tb);
+                SetUpData(reader.ReadLine().Split(' '), marks5tb);
+                SetUpData(reader.ReadLine().Split(' '), marks6tb);
+                SetUpData(reader.ReadLine().Split(' '), marks7tb);
+                SetUpData(reader.ReadLine().Split(' '), marks8tb);
+                SetUpData(reader.ReadLine().Split(' '), marks9tb);
+                SetUpData(reader.ReadLine().Split(' '), marks10tb);
+                SetUpData(reader.ReadLine().Split(' '), propusktb);
+                reader.Close();
+                data.Close();
+            }
+        }
+
+        private void SetUpData(string[] data, TextBox[] textBoxes)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (!data[i].Equals("-"))
+                {
+                    textBoxes[i].AppendText(data[i]);
+                }
             }
         }
 
@@ -43,6 +97,7 @@ namespace kursovaya
             students[0].AddMark(Convert.ToInt32(textBox13.Text));
             students[0].AddMark(Convert.ToInt32(textBox14.Text));
             students[0].AddMark(Convert.ToInt32(textBox15.Text));
+            students[0].SetMissedClassesCount(Convert.ToInt32(textBoxPropusk1.Text));
             label1.Text = Convert.ToString(students[0].GetAverageMark());
 
             students[1].SetName(textBox2.Text);
@@ -56,6 +111,7 @@ namespace kursovaya
             students[1].AddMark(Convert.ToInt32(textBox43.Text));
             students[1].AddMark(Convert.ToInt32(textBox44.Text));
             students[1].AddMark(Convert.ToInt32(textBox45.Text));
+            students[1].SetMissedClassesCount(Convert.ToInt32(textBoxPropusk2.Text));
             label2.Text = Convert.ToString(students[1].GetAverageMark());
 
             students[2].SetName(textBox3.Text);
@@ -69,6 +125,7 @@ namespace kursovaya
             students[2].AddMark(Convert.ToInt32(textBox53.Text));
             students[2].AddMark(Convert.ToInt32(textBox54.Text));
             students[2].AddMark(Convert.ToInt32(textBox55.Text));
+            students[2].SetMissedClassesCount(Convert.ToInt32(textBoxPropusk3.Text));
             label3.Text = Convert.ToString(students[2].GetAverageMark());
 
             students[3].SetName(textBox4.Text);
@@ -82,6 +139,7 @@ namespace kursovaya
             students[3].AddMark(Convert.ToInt32(textBox23.Text));
             students[3].AddMark(Convert.ToInt32(textBox24.Text));
             students[3].AddMark(Convert.ToInt32(textBox25.Text));
+            students[3].SetMissedClassesCount(Convert.ToInt32(textBoxPropusk4.Text));
             label4.Text = Convert.ToString(students[3].GetAverageMark());
 
             students[4].SetName(textBox5.Text);
@@ -95,6 +153,7 @@ namespace kursovaya
             students[4].AddMark(Convert.ToInt32(textBox33.Text));
             students[4].AddMark(Convert.ToInt32(textBox34.Text));
             students[4].AddMark(Convert.ToInt32(textBox35.Text));
+            students[4].SetMissedClassesCount(Convert.ToInt32(textBoxPropusk5.Text));
             label5.Text = Convert.ToString(students[4].GetAverageMark());
         }
 
@@ -105,12 +164,7 @@ namespace kursovaya
 
         private void ToolStripTextBox1_Click(object sender, EventArgs e)
         {
-            //не очищаем поля с фио учеников
-            /*textBox1.Clear(); 
-            textBox2.Clear(); 
-            textBox3.Clear(); 
-            textBox4.Clear(); 
-            textBox5.Clear();*/
+            //оценки
             textBox11.Clear(); textBox21.Clear(); textBox31.Clear(); textBox41.Clear(); textBox51.Clear();
             textBox12.Clear(); textBox22.Clear(); textBox32.Clear(); textBox42.Clear(); textBox52.Clear();
             textBox13.Clear(); textBox23.Clear(); textBox33.Clear(); textBox43.Clear(); textBox53.Clear();
@@ -122,20 +176,41 @@ namespace kursovaya
             textBox9.Clear(); textBox19.Clear(); textBox29.Clear(); textBox39.Clear(); textBox49.Clear();
             textBox10.Clear();textBox20.Clear(); textBox30.Clear(); textBox40.Clear(); textBox50.Clear();
 
+            //средний балл
             label1.ResetText();
             label2.ResetText();
             label3.ResetText();
             label4.ResetText();
             label5.ResetText();
 
+            //пропуски занятий
+            textBoxPropusk1.Clear();
+            textBoxPropusk2.Clear();
+            textBoxPropusk3.Clear();
+            textBoxPropusk4.Clear();
+            textBoxPropusk5.Clear();
+
             foreach (Student s in students)
             {
                 s.RemoveMarks();
+                s.SetMissedClassesCount(0);
             }
+
+            data = new FileStream(file, FileMode.Open);
+            StreamReader reader = new StreamReader(data);
+            string firstLine = reader.ReadLine();
+            reader.Close();
+            data.Close();
+            data = new FileStream(file, FileMode.Truncate);
+            StreamWriter writer = new StreamWriter(data);
+            writer.WriteLine(firstLine);
+            writer.Close();
+            data.Close();
         }
 
         private void ИнструкцияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SaveData();
             Close();
         }
 
@@ -146,7 +221,7 @@ namespace kursovaya
 
         private void ToolStripTextBox3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Рада приветствовать Вас в этой небольшой программе, это окно предназначено для ознакомления с ней. Для работы с приложением заполните поля ФИО и поля оценок, а после нажмите на кнопку, чтобы посчитать результат. Справа от оценок будет показано их среднее арифметическое. К сожалению, это приложение находится в тестовом режиме, поэтому пока доступно только такое количество оценок и учеников. Надеюсь, что ваша работа станет проще с этой программой.", "Инструкция", MessageBoxButtons.OKCancel, MessageBoxIcon.Information
+            MessageBox.Show("Рада приветствовать Вас в этой небольшой программе, это окно предназначено для ознакомления с ней. Для работы с приложением заполните поля ФИО и поля оценок, а после нажмите на кнопку, чтобы посчитать результат. Справа от оценок будет показано их среднее арифметическое. Введенные данные можно сохранить нажатием кнопки \"Сохранить\". Также данные будут автоматически сохранены при выходе из приложения с помощью пункта меню \"Выход\". К сожалению, это приложение находится в тестовом режиме, поэтому пока доступно только такое количество оценок и учеников. Надеюсь, что ваша работа станет проще с этой программой.", "Инструкция", MessageBoxButtons.OKCancel, MessageBoxIcon.Information
                 );
         }
 
@@ -162,7 +237,7 @@ namespace kursovaya
 
         private void button2_Click(object sender, EventArgs e) //show rating
         {
-            string rating = ""; //TODO: create rating from list of students
+            string rating = "";
             students.Sort(compareStudents);
             foreach(Student s in students)
             {
@@ -178,6 +253,69 @@ namespace kursovaya
             else if (a.GetAverageMark() == b.GetAverageMark())
                 return 0;
             else return 1;
+        }
+
+        private void button3_Click(object sender, EventArgs e) //save data into a file
+        {
+            SaveData();
+        }
+
+        private void SaveData()
+        {
+            data = new FileStream(file, FileMode.Truncate);
+            StreamWriter writer = new StreamWriter(data);
+
+            TextBox[] boxesFio = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+            TextBox[] marks1tb = { textBox6, textBox36, textBox46, textBox16, textBox26 };
+            TextBox[] marks2tb = { textBox7, textBox37, textBox47, textBox17, textBox27 };
+            TextBox[] marks3tb = { textBox8, textBox38, textBox48, textBox18, textBox28 };
+            TextBox[] marks4tb = { textBox9, textBox39, textBox49, textBox19, textBox29 };
+            TextBox[] marks5tb = { textBox10, textBox40, textBox50, textBox20, textBox30 };
+            TextBox[] marks6tb = { textBox11, textBox41, textBox51, textBox21, textBox31 };
+            TextBox[] marks7tb = { textBox12, textBox42, textBox52, textBox23, textBox32 };
+            TextBox[] marks8tb = { textBox13, textBox43, textBox53, textBox22, textBox33 };
+            TextBox[] marks9tb = { textBox14, textBox44, textBox54, textBox25, textBox34 };
+            TextBox[] marks10tb = { textBox15, textBox45, textBox55, textBox24, textBox35 };
+            TextBox[] propusktb = { textBoxPropusk1, textBoxPropusk2, textBoxPropusk3, textBoxPropusk4, textBoxPropusk5 };
+            writer.WriteLine(CreateLine(boxesFio));
+            writer.WriteLine(CreateLine(marks1tb));
+            writer.WriteLine(CreateLine(marks2tb));
+            writer.WriteLine(CreateLine(marks3tb));
+            writer.WriteLine(CreateLine(marks4tb));
+            writer.WriteLine(CreateLine(marks5tb));
+            writer.WriteLine(CreateLine(marks6tb));
+            writer.WriteLine(CreateLine(marks7tb));
+            writer.WriteLine(CreateLine(marks8tb));
+            writer.WriteLine(CreateLine(marks9tb));
+            writer.WriteLine(CreateLine(marks10tb));
+            writer.WriteLine(CreateLine(propusktb));
+
+            writer.Flush();
+            writer.Close();
+            data.Close();
+        }
+
+        private string CreateLine(TextBox[] boxes)
+        {
+            string line = "";
+            for (int i = 0; i < boxes.Length - 1; i++)
+            {
+                line = line + GetStr(boxes[i]) + ' ';
+            }
+            line = line + GetStr(boxes[boxes.Length - 1]);
+            return line;
+        }
+
+        private string GetStr(TextBox textBox)
+        {
+            string result = textBox.Text;
+            if (result.Equals(""))
+            {
+                return "-";
+            } else
+            {
+                return result;
+            }
         }
     }
 }

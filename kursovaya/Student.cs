@@ -17,6 +17,7 @@ namespace kursovaya
         {
             marks = new List<Mark>(10);
             avgMark = 0.0f;
+            missedClassesCount = 0;
         }
 
         public string GetName()

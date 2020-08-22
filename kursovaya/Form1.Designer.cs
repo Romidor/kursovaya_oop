@@ -102,6 +102,16 @@
             this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelPropuski = new System.Windows.Forms.Label();
+            this.labelFIO = new System.Windows.Forms.Label();
+            this.labelMarks = new System.Windows.Forms.Label();
+            this.textBoxPropusk1 = new System.Windows.Forms.TextBox();
+            this.textBoxPropusk2 = new System.Windows.Forms.TextBox();
+            this.textBoxPropusk3 = new System.Windows.Forms.TextBox();
+            this.textBoxPropusk4 = new System.Windows.Forms.TextBox();
+            this.textBoxPropusk5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.Меню.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +120,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(637, 342);
+            this.button1.Location = new System.Drawing.Point(29, 350);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 66);
@@ -124,7 +134,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(600, 66);
+            this.label1.Location = new System.Drawing.Point(821, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
@@ -146,7 +156,7 @@
             this.toolStripMenuItem1});
             this.Меню.Location = new System.Drawing.Point(0, 0);
             this.Меню.Name = "Меню";
-            this.Меню.Size = new System.Drawing.Size(1067, 30);
+            this.Меню.Size = new System.Drawing.Size(1115, 28);
             this.Меню.TabIndex = 4;
             this.Меню.Text = "menuStrip1";
             // 
@@ -158,7 +168,7 @@
             this.toolStripTextBox3,
             this.инструкцияToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(65, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(65, 24);
             this.toolStripMenuItem1.Text = "Меню";
             // 
             // toolStripTextBox1
@@ -197,7 +207,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(29, 122);
+            this.textBox2.Location = new System.Drawing.Point(29, 117);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(225, 22);
@@ -221,7 +231,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(29, 282);
+            this.textBox5.Location = new System.Drawing.Point(29, 281);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(225, 22);
@@ -390,7 +400,7 @@
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(276, 282);
+            this.textBox26.Location = new System.Drawing.Point(276, 281);
             this.textBox26.Margin = new System.Windows.Forms.Padding(4);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(23, 22);
@@ -398,7 +408,7 @@
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(308, 282);
+            this.textBox27.Location = new System.Drawing.Point(308, 281);
             this.textBox27.Margin = new System.Windows.Forms.Padding(4);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(23, 22);
@@ -406,7 +416,7 @@
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(340, 282);
+            this.textBox28.Location = new System.Drawing.Point(340, 281);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(23, 22);
@@ -414,7 +424,7 @@
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(372, 282);
+            this.textBox29.Location = new System.Drawing.Point(372, 281);
             this.textBox29.Margin = new System.Windows.Forms.Padding(4);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(23, 22);
@@ -422,7 +432,7 @@
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(404, 282);
+            this.textBox30.Location = new System.Drawing.Point(404, 281);
             this.textBox30.Margin = new System.Windows.Forms.Padding(4);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(23, 22);
@@ -430,7 +440,7 @@
             // 
             // textBox31
             // 
-            this.textBox31.Location = new System.Drawing.Point(436, 282);
+            this.textBox31.Location = new System.Drawing.Point(436, 281);
             this.textBox31.Margin = new System.Windows.Forms.Padding(4);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(23, 22);
@@ -438,7 +448,7 @@
             // 
             // textBox32
             // 
-            this.textBox32.Location = new System.Drawing.Point(468, 282);
+            this.textBox32.Location = new System.Drawing.Point(468, 281);
             this.textBox32.Margin = new System.Windows.Forms.Padding(4);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(23, 22);
@@ -446,7 +456,7 @@
             // 
             // textBox33
             // 
-            this.textBox33.Location = new System.Drawing.Point(500, 282);
+            this.textBox33.Location = new System.Drawing.Point(500, 281);
             this.textBox33.Margin = new System.Windows.Forms.Padding(4);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(23, 22);
@@ -454,7 +464,7 @@
             // 
             // textBox34
             // 
-            this.textBox34.Location = new System.Drawing.Point(532, 282);
+            this.textBox34.Location = new System.Drawing.Point(532, 281);
             this.textBox34.Margin = new System.Windows.Forms.Padding(4);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(23, 22);
@@ -462,7 +472,7 @@
             // 
             // textBox35
             // 
-            this.textBox35.Location = new System.Drawing.Point(564, 282);
+            this.textBox35.Location = new System.Drawing.Point(564, 281);
             this.textBox35.Margin = new System.Windows.Forms.Padding(4);
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(23, 22);
@@ -471,7 +481,7 @@
             // 
             // textBox36
             // 
-            this.textBox36.Location = new System.Drawing.Point(276, 122);
+            this.textBox36.Location = new System.Drawing.Point(276, 117);
             this.textBox36.Margin = new System.Windows.Forms.Padding(4);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(23, 22);
@@ -479,7 +489,7 @@
             // 
             // textBox37
             // 
-            this.textBox37.Location = new System.Drawing.Point(308, 122);
+            this.textBox37.Location = new System.Drawing.Point(308, 117);
             this.textBox37.Margin = new System.Windows.Forms.Padding(4);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(23, 22);
@@ -487,7 +497,7 @@
             // 
             // textBox38
             // 
-            this.textBox38.Location = new System.Drawing.Point(340, 122);
+            this.textBox38.Location = new System.Drawing.Point(340, 117);
             this.textBox38.Margin = new System.Windows.Forms.Padding(4);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(23, 22);
@@ -495,7 +505,7 @@
             // 
             // textBox39
             // 
-            this.textBox39.Location = new System.Drawing.Point(372, 122);
+            this.textBox39.Location = new System.Drawing.Point(372, 117);
             this.textBox39.Margin = new System.Windows.Forms.Padding(4);
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(23, 22);
@@ -503,7 +513,7 @@
             // 
             // textBox40
             // 
-            this.textBox40.Location = new System.Drawing.Point(404, 122);
+            this.textBox40.Location = new System.Drawing.Point(404, 117);
             this.textBox40.Margin = new System.Windows.Forms.Padding(4);
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(23, 22);
@@ -511,7 +521,7 @@
             // 
             // textBox41
             // 
-            this.textBox41.Location = new System.Drawing.Point(436, 122);
+            this.textBox41.Location = new System.Drawing.Point(436, 117);
             this.textBox41.Margin = new System.Windows.Forms.Padding(4);
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(23, 22);
@@ -519,7 +529,7 @@
             // 
             // textBox42
             // 
-            this.textBox42.Location = new System.Drawing.Point(468, 122);
+            this.textBox42.Location = new System.Drawing.Point(468, 117);
             this.textBox42.Margin = new System.Windows.Forms.Padding(4);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(23, 22);
@@ -527,7 +537,7 @@
             // 
             // textBox43
             // 
-            this.textBox43.Location = new System.Drawing.Point(500, 122);
+            this.textBox43.Location = new System.Drawing.Point(500, 117);
             this.textBox43.Margin = new System.Windows.Forms.Padding(4);
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(23, 22);
@@ -535,7 +545,7 @@
             // 
             // textBox44
             // 
-            this.textBox44.Location = new System.Drawing.Point(532, 122);
+            this.textBox44.Location = new System.Drawing.Point(532, 117);
             this.textBox44.Margin = new System.Windows.Forms.Padding(4);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(23, 22);
@@ -543,7 +553,7 @@
             // 
             // textBox45
             // 
-            this.textBox45.Location = new System.Drawing.Point(564, 122);
+            this.textBox45.Location = new System.Drawing.Point(564, 117);
             this.textBox45.Margin = new System.Windows.Forms.Padding(4);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(23, 22);
@@ -633,7 +643,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(600, 122);
+            this.label2.Location = new System.Drawing.Point(821, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
@@ -643,7 +653,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(600, 180);
+            this.label3.Location = new System.Drawing.Point(821, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 17);
@@ -653,7 +663,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(600, 228);
+            this.label4.Location = new System.Drawing.Point(821, 229);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 17);
@@ -663,7 +673,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(600, 286);
+            this.label5.Location = new System.Drawing.Point(821, 284);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 17);
@@ -675,10 +685,10 @@
             this.checkedListBox1.Items.AddRange(new object[] {
             "Хорошо учится",
             "Плохо учится"});
-            this.checkedListBox1.Location = new System.Drawing.Point(673, 63);
+            this.checkedListBox1.Location = new System.Drawing.Point(927, 63);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(159, 38);
+            this.checkedListBox1.Size = new System.Drawing.Size(159, 55);
             this.checkedListBox1.TabIndex = 67;
             // 
             // checkedListBox2
@@ -687,10 +697,10 @@
             this.checkedListBox2.Items.AddRange(new object[] {
             "Хорошо учится",
             "Плохо учится"});
-            this.checkedListBox2.Location = new System.Drawing.Point(673, 117);
+            this.checkedListBox2.Location = new System.Drawing.Point(927, 117);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(159, 38);
+            this.checkedListBox2.Size = new System.Drawing.Size(159, 55);
             this.checkedListBox2.TabIndex = 68;
             // 
             // checkedListBox3
@@ -699,10 +709,10 @@
             this.checkedListBox3.Items.AddRange(new object[] {
             "Хорошо учится",
             "Плохо учится"});
-            this.checkedListBox3.Location = new System.Drawing.Point(673, 166);
+            this.checkedListBox3.Location = new System.Drawing.Point(927, 171);
             this.checkedListBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(159, 38);
+            this.checkedListBox3.Size = new System.Drawing.Size(159, 55);
             this.checkedListBox3.TabIndex = 69;
             // 
             // checkedListBox4
@@ -711,10 +721,10 @@
             this.checkedListBox4.Items.AddRange(new object[] {
             "Хорошо учится",
             "Плохо учится"});
-            this.checkedListBox4.Location = new System.Drawing.Point(673, 215);
+            this.checkedListBox4.Location = new System.Drawing.Point(927, 224);
             this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(159, 38);
+            this.checkedListBox4.Size = new System.Drawing.Size(159, 55);
             this.checkedListBox4.TabIndex = 70;
             // 
             // checkedListBox5
@@ -723,10 +733,10 @@
             this.checkedListBox5.Items.AddRange(new object[] {
             "Хорошо учится",
             "Плохо учится"});
-            this.checkedListBox5.Location = new System.Drawing.Point(673, 265);
+            this.checkedListBox5.Location = new System.Drawing.Point(927, 281);
             this.checkedListBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(159, 38);
+            this.checkedListBox5.Size = new System.Drawing.Size(159, 55);
             this.checkedListBox5.TabIndex = 71;
             // 
             // button2
@@ -734,7 +744,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(637, 426);
+            this.button2.Location = new System.Drawing.Point(29, 450);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(241, 63);
             this.button2.TabIndex = 72;
@@ -742,11 +752,106 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // labelPropuski
+            // 
+            this.labelPropuski.AutoSize = true;
+            this.labelPropuski.Location = new System.Drawing.Point(606, 37);
+            this.labelPropuski.Name = "labelPropuski";
+            this.labelPropuski.Size = new System.Drawing.Size(158, 17);
+            this.labelPropuski.TabIndex = 73;
+            this.labelPropuski.Text = "Количество пропусков";
+            // 
+            // labelFIO
+            // 
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Location = new System.Drawing.Point(26, 37);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(100, 17);
+            this.labelFIO.TabIndex = 74;
+            this.labelFIO.Text = "ФИО ученика";
+            // 
+            // labelMarks
+            // 
+            this.labelMarks.AutoSize = true;
+            this.labelMarks.Location = new System.Drawing.Point(273, 37);
+            this.labelMarks.Name = "labelMarks";
+            this.labelMarks.Size = new System.Drawing.Size(58, 17);
+            this.labelMarks.TabIndex = 75;
+            this.labelMarks.Text = "Оценки";
+            // 
+            // textBoxPropusk1
+            // 
+            this.textBoxPropusk1.Location = new System.Drawing.Point(664, 63);
+            this.textBoxPropusk1.Name = "textBoxPropusk1";
+            this.textBoxPropusk1.Size = new System.Drawing.Size(23, 22);
+            this.textBoxPropusk1.TabIndex = 76;
+            // 
+            // textBoxPropusk2
+            // 
+            this.textBoxPropusk2.Location = new System.Drawing.Point(664, 117);
+            this.textBoxPropusk2.Name = "textBoxPropusk2";
+            this.textBoxPropusk2.Size = new System.Drawing.Size(23, 22);
+            this.textBoxPropusk2.TabIndex = 77;
+            // 
+            // textBoxPropusk3
+            // 
+            this.textBoxPropusk3.Location = new System.Drawing.Point(664, 171);
+            this.textBoxPropusk3.Name = "textBoxPropusk3";
+            this.textBoxPropusk3.Size = new System.Drawing.Size(23, 22);
+            this.textBoxPropusk3.TabIndex = 78;
+            // 
+            // textBoxPropusk4
+            // 
+            this.textBoxPropusk4.Location = new System.Drawing.Point(664, 224);
+            this.textBoxPropusk4.Name = "textBoxPropusk4";
+            this.textBoxPropusk4.Size = new System.Drawing.Size(23, 22);
+            this.textBoxPropusk4.TabIndex = 79;
+            // 
+            // textBoxPropusk5
+            // 
+            this.textBoxPropusk5.Location = new System.Drawing.Point(664, 281);
+            this.textBoxPropusk5.Name = "textBoxPropusk5";
+            this.textBoxPropusk5.Size = new System.Drawing.Size(23, 22);
+            this.textBoxPropusk5.TabIndex = 80;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(770, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 17);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Средний балл";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(339, 356);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(161, 59);
+            this.button3.TabIndex = 82;
+            this.button3.Text = "Сохранить";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ClassJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1115, 554);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxPropusk5);
+            this.Controls.Add(this.textBoxPropusk4);
+            this.Controls.Add(this.textBoxPropusk3);
+            this.Controls.Add(this.textBoxPropusk2);
+            this.Controls.Add(this.textBoxPropusk1);
+            this.Controls.Add(this.labelMarks);
+            this.Controls.Add(this.labelFIO);
+            this.Controls.Add(this.labelPropuski);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.checkedListBox5);
             this.Controls.Add(this.checkedListBox4);
@@ -903,6 +1008,16 @@
         private System.Windows.Forms.CheckedListBox checkedListBox5;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelPropuski;
+        private System.Windows.Forms.Label labelFIO;
+        private System.Windows.Forms.Label labelMarks;
+        private System.Windows.Forms.TextBox textBoxPropusk1;
+        private System.Windows.Forms.TextBox textBoxPropusk2;
+        private System.Windows.Forms.TextBox textBoxPropusk3;
+        private System.Windows.Forms.TextBox textBoxPropusk4;
+        private System.Windows.Forms.TextBox textBoxPropusk5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
     }
 }
 
